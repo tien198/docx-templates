@@ -1,0 +1,19 @@
+{
+  "name": "docx-templates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx app.ts"
+  },
+  "dependencies": {
+    "angular-expressions": "^1.5.1",
+    "docx-templates": "^4.14.1",
+    "docxtemplater": "^3.67.5",
+    "pako": "^2.1.0",
+    "pizzip": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1"
+  }
+}
