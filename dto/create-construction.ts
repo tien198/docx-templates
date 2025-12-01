@@ -24,7 +24,7 @@ export class CreateConstructionDTO {
   repairScope: string;
   decision: {
     number: string;
-    date: DateObject;
+    date: string;
   };
 
   constructor(con: Construction) {
@@ -50,7 +50,7 @@ export class CreateConstructionDTO {
 
     this.decision = {
       number: con.decision?.number,
-      date: this.toDateObject(con.decision?.date),
+      date: this.formatDate(con.decision.date as string),
     };
   }
 
@@ -60,6 +60,14 @@ export class CreateConstructionDTO {
     const mm = String(date.getMonth() + 1).padStart(2, "0");
     const yyyy = String(date.getFullYear());
     return { dd, mm, yyyy };
+  };
+
+  formatDate = (ISOString: string) => {
+    const decisionDate = new Date(ISOString);
+    const dd = String(decisionDate.getDate()).padStart(2, "0");
+    const mm = String(decisionDate.getMonth() + 1).padStart(2, "0");
+    const yyyy = decisionDate.getFullYear();
+    return dd + "/" + mm + "/" + yyyy;
   };
 
   formatCurrency = (amount: number) => {
