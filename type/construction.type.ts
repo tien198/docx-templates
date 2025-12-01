@@ -2,17 +2,20 @@ export interface Construction {
   id?: string;
   documentNo: string;
   name: string;
+  // dateOfSigning
   dateOfSigning: Date | string;
   budget: number;
   stringBudget: string;
+  // constructionExecutionTime
   constructionExecutionTime: {
     startDate: Date | string;
     endDate: Date | string;
   };
+  // existingConditionOfTheStructure
   existingConditionOfTheStructure: string;
   repairScope: string;
   decision: {
-    decisionNumber: string;
-    decisionDate: Date | string;
+    number: string;
+    date: Date | string;
   };
 }

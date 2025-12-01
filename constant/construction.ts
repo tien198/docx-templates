@@ -4,11 +4,7 @@ export const construction: Construction = {
   id: "1764347797538-fa",
   documentNo: "fa",
   name: "Công Trình A",
-  dos: {
-    dd: new Date("2025-10-31T17:00:00.000Z").getDate(),
-    mm: new Date("2025-10-31T17:00:00.000Z").getMonth(),
-    yyyy: new Date("2025-10-31T17:00:00.000Z").getFullYear(),
-  },
+  dateOfSigning: "2025-10-31T17:00:00.000Z",
   budget: 1000000000,
   stringBudget: "Một tỷ đồng",
   constructionExecutionTime: {
@@ -20,7 +16,7 @@ export const construction: Construction = {
   repairScope:
     "Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết Sửa hết ",
   decision: {
-    decisionNumber: "QTCB",
-    decisionDate: "2025-10-31T17:00:00.000Z",
+    number: "3052/QĐ – TC",
+    date: "2025-10-31T17:00:00.000Z",
   },
 };

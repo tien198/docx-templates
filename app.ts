@@ -9,6 +9,7 @@ import expressionParser from "docxtemplater/expressions";
 // Builtin file system utilities
 import fs from "fs";
 import path from "path";
+import { CreateConstructionDTO } from "./dto/create-construction";
 
 // Load the docx file as binary content
 const content = fs.readFileSync(
@@ -44,7 +45,8 @@ const doc = new Docxtemplater(zip, {
  * - {last_name} with Doe,
  * ...
  */
-doc.render(construction);
+
+doc.render(new CreateConstructionDTO(construction));
 
 /*
  * Get the output document and export it as a Node.js buffer
